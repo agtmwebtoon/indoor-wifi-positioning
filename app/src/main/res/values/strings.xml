@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">WifiIndoorPositioning</string>
-    <string name="title">Wi-fi indoor positioning 구축</string>
+    <string name="title">WiFi Indoor Positioning \nDeveloper Mode</string>
     <string name="floorNum">층</string>
     <string name="roomNum">호 수</string>
-    <string name="startSensing">측정 시작</string>
-    <string name="stopSensing">측정 중지</string>
+    <string name="startSensing">START</string>
+    <string name="stopSensing">STOP</string>
 </resources>

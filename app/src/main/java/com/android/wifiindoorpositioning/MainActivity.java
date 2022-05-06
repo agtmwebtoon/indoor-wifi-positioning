@@ -6,14 +6,18 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.media.MediaDataSource;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -25,13 +29,16 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
-    EditText floorNum, roomNum;
+    Spinner floorNum, roomNum;
     Button startBtn, stopBtn;
     WifiManager wifiManager;
     BroadcastReceiver wifiScanReceiver;
 
     public int floor;
+    public String f,r;
     public String room;
+    String[] floors = {"층","2층", "3층", "4층"};
+    String[] roomNums = {"1호","2호","3호"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +46,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        floorNum = (EditText) findViewById(R.id.floorNum);
-        roomNum = (EditText) findViewById(R.id.roomNum);
+        floorNum = (Spinner) findViewById(R.id.floorNum);
+        roomNum = (Spinner) findViewById(R.id.roomNum);
         startBtn = (Button) findViewById(R.id.startBtn);
         stopBtn = (Button) findViewById(R.id.stopBtn);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this, android.R.layout.simple_spinner_item, floors
+        );
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        floorNum.setAdapter(adapter);
+
+        ArrayAdapter<String> Radapter = new ArrayAdapter<String>(
+                this, android.R.layout.simple_spinner_item, roomNums
+        );
+        Radapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        roomNum.setAdapter(Radapter);
 
         /**
          * @auther Me
@@ -78,15 +97,31 @@ public class MainActivity extends AppCompatActivity {
         getApplicationContext().registerReceiver(wifiScanReceiver, intentFilter);
 
 
-        try{
-            String f = floorNum.getText().toString().trim();
+        floorNum.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
+                f = floors[position];
 
-            floor = Integer.parseInt(f);
-            Toast.makeText(this, "층 수: " + floor, Toast.LENGTH_SHORT).show();
-        }catch (NumberFormatException e){
-            Toast.makeText(this, "숫자만 입력하세요", Toast.LENGTH_SHORT).show();
-        }
-        room = roomNum.getText().toString().trim();
+                floor = f.charAt(0) - '0';
+                Log.d("floor",floor+"층 선택");
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent){
+                f = "층";
+            }
+        });
+        roomNum.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
+                r = roomNums[position];
+                room = r;
+                Log.d("roomNum",room+" 선택");
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent){
+                r = "호 수";
+            }
+        });
 
         /**
          * @auther Me
@@ -101,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 boolean success = wifiManager.startScan();
+
                 if (!success) {
                     // scan failure handling
                     Log.d("wifi", "error");
