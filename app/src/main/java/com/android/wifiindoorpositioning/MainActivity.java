@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("TAG", "층수: " + floor + ", 호 수: " + room);
 
                 Toast.makeText(getApplicationContext(), "측정 시작", Toast.LENGTH_SHORT).show();
+                //TODO: 센싱 데이터 값도 db에 넣기.
             }
         });
 
