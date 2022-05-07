@@ -17,9 +17,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.wifiindoorpositioning.wifimodel.listViewAdapter;
+import com.android.wifiindoorpositioning.wifimodel.wifiModel;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -31,8 +34,13 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     Spinner floorNum, roomNum;
     Button startBtn, stopBtn;
+    ListView listView;
     WifiManager wifiManager;
+    ProgressBar progressBar;
+
     BroadcastReceiver wifiScanReceiver;
+    ArrayList<wifiModel> models = new ArrayList<>();
+    listViewAdapter mAdapter;
 
     public int floor;
     public String f,r;
@@ -50,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
         roomNum = (Spinner) findViewById(R.id.roomNum);
         startBtn = (Button) findViewById(R.id.startBtn);
         stopBtn = (Button) findViewById(R.id.stopBtn);
+        listView = (ListView)findViewById(R.id.listView);
+        progressBar = (ProgressBar)findViewById(R.id.progress);
+
+        progressBar.setVisibility(ProgressBar.INVISIBLE);
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this, android.R.layout.simple_spinner_item, floors
@@ -62,6 +75,11 @@ public class MainActivity extends AppCompatActivity {
         );
         Radapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         roomNum.setAdapter(Radapter);
+
+        //WiFi 정보 수신 후 listView에 연결할 어뎁터
+
+        mAdapter = new listViewAdapter(this, models);
+        listView.setAdapter(mAdapter);
 
         /**
          * @auther Me
@@ -134,12 +152,16 @@ public class MainActivity extends AppCompatActivity {
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //수신 중이면 Progressbar 돌리기
+                progressBar.setVisibility(ProgressBar.VISIBLE);
 
                 boolean success = wifiManager.startScan();
 
                 if (!success) {
                     // scan failure handling
                     Log.d("wifi", "error");
+                    Toast.makeText(getApplicationContext(), "측정 실패", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(ProgressBar.INVISIBLE);
                 }
 
             }
@@ -164,12 +186,27 @@ public class MainActivity extends AppCompatActivity {
     //TODO Firebase에 와이파이 신호 정보 그대로 저장
 
 
+
     private void scanSuccess() {
+        models.clear();
         List<ScanResult> results = wifiManager.getScanResults();
         for( ScanResult result: results) {
-            Log.d("wifi", result.level + " " + result.SSID);
+
+            //Result에서 field가져와서 listview에 들어가는 데이터 갱신
+
+            String ssid = result.SSID;
+            int level = result.level;
+            int freq = result.frequency;
+            long timestamp = result.timestamp;
+
+            models.add(new wifiModel(ssid, level, freq, timestamp));
+            Log.d("wifi", result.toString());
         }
-        Toast.makeText(getApplicationContext(), "완료", Toast.LENGTH_SHORT).show();
+        mAdapter.notifyDataSetChanged();
+
+        //ProgressBar 다시 안보기에
+        progressBar.setVisibility(ProgressBar.INVISIBLE);
+        Toast.makeText(getApplicationContext(), "완료", Toast.LENGTH_LONG).show();
 
     }
 
