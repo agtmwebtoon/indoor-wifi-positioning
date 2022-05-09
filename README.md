@@ -1,10 +1,27 @@
 # Indoor Wi-Fi positioning
+We suggest Wi-Fi positioning based on **Fingerprinting**
+* Figerprinting - A unique characteristic of the radio signal (e.g. Identify a position based on a set of RSSIs associated with APs
+
+### Goal
+Develop Android application for indoor positioning (AI 공학과 4, 5층) using Wi-Fi and sensors
+
+### Blueprint of AI 공학관
+
 
 
 
 ## 1st week
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Progress
+* Set the role for each member
+* Create Admin App 
+* Implement Wi-Fi sensing
+* Create User App
+
+### To Do
+* Collect data using another sensors (e.g. GPS, Barometer)
+* Implement back-end server using firebase realtime database
+* Implement python environment for analysis sensor data
 
 
 
@@ -33,6 +50,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Knowledge about 802.11 protocol
+* Basic android programming skill with java
+* Basic Python programming skill
+* Data analysis technique
