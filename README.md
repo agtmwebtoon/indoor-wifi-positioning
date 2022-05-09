@@ -3,7 +3,7 @@ We suggest Wi-Fi positioning based on **Fingerprinting**
 * Figerprinting - A unique characteristic of the radio signal (e.g. Identify a position based on a set of RSSIs associated with APs
 
 ### Goal
-Develop Android application for indoor positioning (AI 공학과 4, 5층) using Wi-Fi and sensors
+Develop Android application for indoor positioning (AI 공학관 4, 5층) using Wi-Fi and sensors
 
 ### Blueprint of AI 공학관
 <img width="711" alt="스크린샷 2022-05-09 오후 9 53 12" src="https://user-images.githubusercontent.com/50310635/167414331-df3c09ef-82ee-41f5-ab18-9369ea44a8aa.png">
