@@ -26,12 +26,12 @@ public class wifiModel {
         return SSID;
     }
 
-    public String getFrequency() {
-        return "freq: "+ frequency;
+    public int getFrequency() {
+        return frequency;
     }
 
-    public String getLevel() {
-        return "level: "+ level + "db";
+    public int getLevel() {
+        return level;
     }
 
     public String getTimestamp() {

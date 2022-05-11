@@ -42,6 +42,7 @@ public class listViewAdapter extends BaseAdapter {
         return i;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
@@ -54,8 +55,8 @@ public class listViewAdapter extends BaseAdapter {
         TextView timestamp = (TextView) mView.findViewById(R.id.timestamp);
 
         ssid.setText(model.get(i).getSSID());
-        level.setText(model.get(i).getLevel());
-        freq.setText(model.get(i).getFrequency());
+        level.setText("level: " + model.get(i).getLevel() + "db");
+        freq.setText("freq: " + model.get(i).getFrequency());
         timestamp.setText(model.get(i).getTimestamp());
 
         return mView;

@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     WifiManager wifiManager;
     ProgressBar progressBar;
 
+
     BroadcastReceiver wifiScanReceiver;
     ArrayList<wifiModel> models = new ArrayList<>();
     listViewAdapter mAdapter;
@@ -45,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
     public int floor;
     public String f,r;
     public String room;
-    String[] floors = {"층","2층", "3층", "4층"};
-    String[] roomNums = {"1호","2호","3호"};
+    String[] floors = {"4층", "5층"};
+    String[] roomNums = {"1호","2호","3호","4호","5호","6호","7호","8호","9호","10호","11호","12호","13호","14호","15호","16호","17호","18호","19호","20호"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -199,6 +200,11 @@ public class MainActivity extends AppCompatActivity {
             int freq = result.frequency;
             long timestamp = result.timestamp;
 
+            //wifi 데이터 모델 객체 생성
+            wifiModel wifi = new wifiModel(ssid, level, freq, timestamp);
+
+            //floor/room/unique key 아래에 sensing 된 데이터 추가
+            mDatabase.child(f+"/"+room).push().setValue(wifi);
             models.add(new wifiModel(ssid, level, freq, timestamp));
             Log.d("wifi", result.toString());
         }
