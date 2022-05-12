@@ -27,7 +27,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -191,7 +193,11 @@ public class MainActivity extends AppCompatActivity {
     private void scanSuccess() {
         models.clear();
         List<ScanResult> results = wifiManager.getScanResults();
+
+        String key = mDatabase.push().getKey();
         for( ScanResult result: results) {
+
+
 
             //Result에서 field가져와서 listview에 들어가는 데이터 갱신
 
@@ -199,12 +205,16 @@ public class MainActivity extends AppCompatActivity {
             int level = result.level;
             int freq = result.frequency;
             long timestamp = result.timestamp;
+            String bssid = result.BSSID;
 
             //wifi 데이터 모델 객체 생성
             wifiModel wifi = new wifiModel(ssid, level, freq, timestamp);
+            Map<String, Object> update = new HashMap<>();
+
+            update.put("level", level);
 
             //floor/room/unique key 아래에 sensing 된 데이터 추가
-            mDatabase.child(f+"/"+room).push().setValue(wifi);
+            mDatabase.child(f+"/"+ room + "/" + bssid + "/" + key).setValue(level);
             models.add(new wifiModel(ssid, level, freq, timestamp));
             Log.d("wifi", result.toString());
         }
