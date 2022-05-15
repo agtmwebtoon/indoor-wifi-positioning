@@ -29,6 +29,7 @@ Develop Android application for indoor positioning (AI 공학관 4, 5층) using 
 
 ### Progress
 
+![WF1](https://user-images.githubusercontent.com/104605749/168459127-5470ae9b-f954-41da-bf5a-721f58a41072.jpg)
 
 
 ## Deployment
