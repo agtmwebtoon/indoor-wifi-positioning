@@ -25,6 +25,10 @@ Develop Android application for indoor positioning (AI 공학관 4, 5층) using 
 * Implement back-end server using firebase realtime database
 * Implement python environment for analysis sensor data
 
+## 2nd week
+
+### Progress
+
 
 
 ## Deployment
