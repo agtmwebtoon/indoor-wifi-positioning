@@ -32,17 +32,19 @@ Develop Android application for indoor positioning (AI 공학관 4, 5층) using 
 * Make an app that can measure the RSSI value of Wi-Fi  
 * Upload the measured value to the database (FIREBASS).
 
-### Admin measurement app
+### Admin measurement app testing
 
-Use the spinner to select the number of floors and lakes and press the START button to find the RSSI value of nearby Wi-Fi and inform the WAP and distance.
+Use the spinner to select the number of floors and lakes and press the START button to find the RSSI(Received Signal Strength Indication Value) value of nearby Wi-Fi and inform the WAP(Wireless Access Point) and distance.
 
 <img src="https://user-images.githubusercontent.com/104605749/168459534-4885bdc5-7205-4140-9ace-c9283cf9a16d.jpg" width = "200" height = "400"/>
 
 ### Wi-Fi Signal Stength
 
-Contains the RSSI (Received Signal Strength Indication Value) of the WAP (Wireless Access Point) at the measured location. When RSSI values are expressed in negative format, the closer the value is to 0, the stronger the received signal.
+Contains the RSSI of the WAP at the measured location. When RSSI values are expressed in negative format, the closer the value is to 0, the stronger the received signal.
 
 ![WF1](https://user-images.githubusercontent.com/104605749/168459127-5470ae9b-f954-41da-bf5a-721f58a41072.jpg)
+
+작성 중 입니다
 
 ## Deployment
 
