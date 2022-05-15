@@ -29,9 +29,13 @@ Develop Android application for indoor positioning (AI 공학관 4, 5층) using 
 
 ### Progress
 
+In the second week, make an app that can measure the RSSI value of Wi-Fi and upload the measured value to the database (FIREBASS).
+
+Contains the RSSI (Received Signal Strength Indication Value) of the WAP (Wireless Access Point) at the measured location. When RSSI values are expressed in negative format, the closer the value is to 0, the stronger the received signal.
+
 ![WF1](https://user-images.githubusercontent.com/104605749/168459127-5470ae9b-f954-41da-bf5a-721f58a41072.jpg)
 
-[https://www.netspotapp.com/wifi-signal-strength/what-is-rssi-level.html]
+
 
 ## Deployment
 
