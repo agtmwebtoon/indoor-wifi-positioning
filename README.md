@@ -38,8 +38,7 @@ Contains the RSSI (Received Signal Strength Indication Value) of the WAP (Wirele
 
 SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 
-![APP1](https://user-images.githubusercontent.com/104605749/168459529-2e39f304-56ce-42d6-a1de-1ffca7022ae2.jpg)
-
+<img src="https://user-images.githubusercontent.com/104605749/168459534-4885bdc5-7205-4140-9ace-c9283cf9a16d.jpg" width = "200" height = "400"/>
 
 ## Deployment
 
