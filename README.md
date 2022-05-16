@@ -44,7 +44,8 @@ Contains the RSSI of the WAP at the measured location. When RSSI values are expr
 
 ![WF1](https://user-images.githubusercontent.com/104605749/168459127-5470ae9b-f954-41da-bf5a-721f58a41072.jpg)
 
-작성 중 입니다
+파이어베이스에 데이터 올라가고 그 데이터를 파이썬으로 정리하는 것 까지 설명해놓겠습니다
+2주차 끝
 
 ## Deployment
 
