@@ -61,7 +61,7 @@ Contains the RSSI of the WAP at the measured location. When RSSI values are expr
 ## Authors
 
 * **1st week** - *MinHyung Lee* - [MinHyung](https://github.com/agtmwebtoon)
-* **2st week** - *Doe* - 
+* **2st week** - *Kyungho Choi* - [Kyungho](https://github.com/KyunghoC)
 * **3st week** - *Doe* - 
 * **4st week** - *Doe* - 
 * **5st week** - *MinHyung Lee* - [MinHyung](https://github.com/agtmwebtoon)
