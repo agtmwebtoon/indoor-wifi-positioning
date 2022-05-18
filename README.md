@@ -34,7 +34,7 @@ Develop Android application for indoor positioning (AI 공학관 4, 5층) using 
 
 ### Admin measurement app testing
 
-Use the spinner to select the number of floors and lakes and press the START button to find the RSSI(Received Signal Strength Indication Value) value of nearby Wi-Fi and inform the WAP(Wireless Access Point) and distance.
+Use the spinner to select the number of floors and  and press the START button to find the RSSI(Received Signal Strength Indication Value) value of nearby Wi-Fi and inform the WAP(Wireless Access Point) and distance.
 
 <img src="https://user-images.githubusercontent.com/104605749/168459534-4885bdc5-7205-4140-9ace-c9283cf9a16d.jpg" width = "200" height = "400"/>
 
