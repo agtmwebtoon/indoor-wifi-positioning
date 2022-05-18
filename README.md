@@ -63,7 +63,8 @@ import numpy as np
 cred = credentials.Certificate("myKey.json")
 
 firebase_admin.initialize_app(cred,
-{'databaseURL': 'https://wifi-indoor-positioning-default-rtdb.firebaseio.com/'})
+{'databaseURL': 'https://wifi-indoor-positioning-default-rtdb.
+                                             firebaseio.com/'})
 ```
 
 ```
@@ -83,7 +84,7 @@ df["target"] = ???
 df
 ```
 
-<img src="![image]https://user-images.githubusercontent.com/104605749/168984616-8c47083a-ab7a-48aa-b011-185688903e1f.png" width = "600" height = "400">
+![image](https://user-images.githubusercontent.com/104605749/168984616-8c47083a-ab7a-48aa-b011-185688903e1f.png)
 
 * [Android](http://www.dropwizard.io/1.0.2/docs/) - Mobile development platform
 * [Firebase](https://maven.apache.org/) - Back-end design
