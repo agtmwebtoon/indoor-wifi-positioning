@@ -29,8 +29,8 @@ Develop Android application for indoor positioning (AI 공학관 4, 5층) using 
 
 ### Progress
 
-* Make an app that can measure the RSSI value of Wi-Fi  
-* Upload the measured value to the database (FIREBASS).
+* Make an Admin app that can measure the RSSI value of Wi-Fi
+* After uploading the measurement value to the database (FIREBASE), convert it using Python
 
 ### Admin measurement app testing
 
@@ -45,11 +45,6 @@ Contains the RSSI of the WAP at the measured location. When RSSI values are expr
 ![WF1](https://user-images.githubusercontent.com/104605749/168459127-5470ae9b-f954-41da-bf5a-721f58a41072.jpg)
 
 ### Data exploration
-
-파이어베이스에 데이터 올라가고 그 데이터를 파이썬으로 정리하는 것 까지 설명해놓겠습니다
-2주차 끝
-
-#### Deployment
 
 ```
 import firebase_admin
@@ -84,7 +79,11 @@ df["target"] = ???
 df
 ```
 
-![image](https://user-images.githubusercontent.com/104605749/168984616-8c47083a-ab7a-48aa-b011-185688903e1f.png)
+![image](https://user-images.githubusercontent.com/104605749/168987604-b56232fc-b8cf-43f3-aea7-baa4487dab73.png)
+
+## 3rd week
+
+## Deployment
 
 * [Android](http://www.dropwizard.io/1.0.2/docs/) - Mobile development platform
 * [Firebase](https://maven.apache.org/) - Back-end design
