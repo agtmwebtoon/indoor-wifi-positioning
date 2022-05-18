@@ -49,7 +49,7 @@ Contains the RSSI of the WAP at the measured location. When RSSI values are expr
 파이어베이스에 데이터 올라가고 그 데이터를 파이썬으로 정리하는 것 까지 설명해놓겠습니다
 2주차 끝
 
-## Deployment
+#### Deployment
 
 ```
 import firebase_admin
@@ -62,9 +62,8 @@ import numpy as np
 ```
 cred = credentials.Certificate("myKey.json")
 
-firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://wifi-indoor-positioning-default-rtdb.firebaseio.com/'
-})
+firebase_admin.initialize_app(cred,
+{'databaseURL': 'https://wifi-indoor-positioning-default-rtdb.firebaseio.com/'})
 ```
 
 ```
@@ -84,7 +83,7 @@ df["target"] = ???
 df
 ```
 
-<img src="![image]https://user-images.githubusercontent.com/104605749/168984616-8c47083a-ab7a-48aa-b011-185688903e1f.png" width = "300" height = "200">
+<img src="![image]https://user-images.githubusercontent.com/104605749/168984616-8c47083a-ab7a-48aa-b011-185688903e1f.png" width = "600" height = "400">
 
 * [Android](http://www.dropwizard.io/1.0.2/docs/) - Mobile development platform
 * [Firebase](https://maven.apache.org/) - Back-end design
