@@ -44,10 +44,47 @@ Contains the RSSI of the WAP at the measured location. When RSSI values are expr
 
 ![WF1](https://user-images.githubusercontent.com/104605749/168459127-5470ae9b-f954-41da-bf5a-721f58a41072.jpg)
 
+### Data exploration
+
 파이어베이스에 데이터 올라가고 그 데이터를 파이썬으로 정리하는 것 까지 설명해놓겠습니다
 2주차 끝
 
 ## Deployment
+
+```
+import firebase_admin
+from firebase_admin import db
+from firebase_admin import credentials
+import pandas as pd
+import numpy as np
+```
+
+```
+cred = credentials.Certificate("myKey.json")
+
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://wifi-indoor-positioning-default-rtdb.firebaseio.com/'
+})
+```
+
+```
+#원하는 호 수 => 504호 => (5층/4호)
+ref = db.reference('?층/??호')
+p = ref.get()
+get_list = []
+```
+
+```
+df = pd.DataFrame(p)
+df.index = np.arange(len(df))
+
+#호 수로 입력
+df["target"] = ???
+
+df
+```
+
+<img src="![image]https://user-images.githubusercontent.com/104605749/168984616-8c47083a-ab7a-48aa-b011-185688903e1f.png" width = "300" height = "200">
 
 * [Android](http://www.dropwizard.io/1.0.2/docs/) - Mobile development platform
 * [Firebase](https://maven.apache.org/) - Back-end design
