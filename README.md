@@ -46,6 +46,10 @@ Contains the RSSI of the WAP at the measured location. When RSSI values are expr
 
 ### Data exploration
 
+![image](https://user-images.githubusercontent.com/104605749/168989902-f012af90-0697-417f-bbb3-9eb778ab7ed0.png)
+
+Only the reception strength of the measured value is measured in the (FIREBASE) data set. Convert the measured value to a data frame using Python
+
 ```
 import firebase_admin
 from firebase_admin import db
