@@ -51,22 +51,6 @@ Contains the RSSI of the WAP at the measured location. When RSSI values are expr
 Only the reception strength of the measured value is measured in the (FIREBASE) data set. Convert the measured value to a data frame using Python
 
 ```
-import firebase_admin
-from firebase_admin import db
-from firebase_admin import credentials
-import pandas as pd
-import numpy as np
-```
-
-```
-cred = credentials.Certificate("myKey.json")
-
-firebase_admin.initialize_app(cred,
-{'databaseURL': 'https://wifi-indoor-positioning-default-rtdb.
-                                             firebaseio.com/'})
-```
-
-```
 #원하는 호 수 => 504호 => (5층/4호)
 ref = db.reference('?층/??호')
 p = ref.get()
