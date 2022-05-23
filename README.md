@@ -85,10 +85,10 @@ df
 ## Authors
 
 * **1st week** - *MinHyung Lee* - [MinHyung](https://github.com/agtmwebtoon)
-* **2st week** - *Kyungho Choi* - [Kyungho](https://github.com/KyunghoC)
-* **3st week** - *Doe* - 
-* **4st week** - *Doe* - 
-* **5st week** - *MinHyung Lee* - [MinHyung](https://github.com/agtmwebtoon)
+* **2nd week** - *Kyungho Choi* - [Kyungho](https://github.com/KyunghoC)
+* **3rd week** - *Doe* - 
+* **4th week** - *Doe* - 
+* **5th week** - *MinHyung Lee* - [MinHyung](https://github.com/agtmwebtoon)
 
 ## License
 
