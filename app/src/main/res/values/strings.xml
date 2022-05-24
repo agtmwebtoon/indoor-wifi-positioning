@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WifiIndoorPositioning</string>
+    <string name="app_name">WiFiIndoor 개발자모드</string>
     <string name="title">WiFi Indoor Positioning \nDeveloper Mode</string>
     <string name="floorNum">층</string>
     <string name="roomNum">호 수</string>
