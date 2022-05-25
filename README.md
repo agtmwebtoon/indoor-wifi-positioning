@@ -70,6 +70,39 @@ df
 ![image](https://user-images.githubusercontent.com/104605749/168987604-b56232fc-b8cf-43f3-aea7-baa4487dab73.png)
 
 ## 3rd week
+## 4th week
+### Progress
+
+* Dataset collection
+* Dataset Reorganization
+* Implement restAPI using google AI platform
+* Associate information with user apps
+
+### Release to User App
+- Using Google AI Platform:  
+  AI Platform is a service created by Google Cloud Platform that helps you implement and deploy machine learning models for production    
+  ![image](https://user-images.githubusercontent.com/31121701/170215623-20bf009f-5749-4e11-92cd-eaba135f097c.png)  
+- Tools to help implement, deploy
+  - Serving, TFX, Explainable AI, TPU
+  - AI Hub, Kubeflow
+  - Various tools are available and are increasingly being added
+
+### RestAPI
+   ![image](https://user-images.githubusercontent.com/31121701/170223860-f086afa8-88f1-44c9-b15f-d159014217fe.png)    
+
+   After deep learning the dataset through the Google AI Platform and completing modeling, it is released using RestAPI  
+   It uses Google's Identity Platform Rest API to perform common user tasks, such as user token tasks.  
+
+### Check Location
+  ![image](https://user-images.githubusercontent.com/31121701/170227996-b554011a-d28b-4f75-8542-cc5a88d5c8ee.png) ![image](https://user-images.githubusercontent.com/31121701/170228397-959ba7e6-5320-44e1-aae2-b77f893a023f.png)
+
+
+
+
+
+
+
+
 
 ## Deployment
 
@@ -87,7 +120,7 @@ df
 * **1st week** - *MinHyung Lee* - [MinHyung](https://github.com/agtmwebtoon)
 * **2nd week** - *Kyungho Choi* - [Kyungho](https://github.com/KyunghoC)
 * **3rd week** - *Doe* - 
-* **4th week** - *Doe* - 
+* **4th week** - *Yunho Kim* - [YunHo](https://github.com/ua1it)
 * **5th week** - *MinHyung Lee* - [MinHyung](https://github.com/agtmwebtoon)
 
 ## License
