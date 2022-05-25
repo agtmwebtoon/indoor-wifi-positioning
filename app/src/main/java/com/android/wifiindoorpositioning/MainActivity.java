@@ -48,8 +48,12 @@ public class MainActivity extends AppCompatActivity {
     public int floor;
     public String f,r;
     public String room;
-    String[] floors = {"4층", "5층"};
-    String[] roomNums = {"1호","2호","3호","4호","5호","6호","7호","8호","9호","10호","11호","12호","13호","14호","15호","16호","17호","18호","19호","20호"};
+    String[] floors = {"2층", "4층", "5층", "test층"};
+    String[] roomNums = {"1호","2호","3호","4호","5호","6호",
+            "7호","8호","9호","10호","11호","12호","13호",
+            "14호","15호","16호","17호","18호","19호",
+            "21호", "22호", "23호", "24호", "25호",
+            "26호", "27호", "28호", "29호", "30호" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         progressBar.setVisibility(ProgressBar.INVISIBLE);
 
-
+        stopBtn.setVisibility(View.GONE);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this, android.R.layout.simple_spinner_item, floors
         );
