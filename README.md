@@ -70,6 +70,10 @@ df
 ![image](https://user-images.githubusercontent.com/104605749/168987604-b56232fc-b8cf-43f3-aea7-baa4487dab73.png)
 
 ## 3rd week
+### Nan값 채우기
+### 데이터 개수 적은거 늘리기
+### Algorithm
+
 ## 4th week
 ### Progress
 
@@ -119,7 +123,7 @@ df
 
 * **1st week** - *MinHyung Lee* - [MinHyung](https://github.com/agtmwebtoon)
 * **2nd week** - *Kyungho Choi* - [Kyungho](https://github.com/KyunghoC)
-* **3rd week** - *Doe* - 
+* **3rd week** - *Hyegyun Yim* - [hgyim00](https://github.com/hgyim00)
 * **4th week** - *Yunho Kim* - [YunHo](https://github.com/ua1it)
 * **5th week** - *MinHyung Lee* - [MinHyung](https://github.com/agtmwebtoon)
 
