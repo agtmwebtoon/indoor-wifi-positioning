@@ -70,9 +70,18 @@ df
 ![image](https://user-images.githubusercontent.com/104605749/168987604-b56232fc-b8cf-43f3-aea7-baa4487dab73.png)
 
 ## 3rd week
-### Nan값 채우기
-### 데이터 개수 적은거 늘리기
+### 측정치 확인
+CAUTION: Do not measure too biased when measuring.
+Problems along the way: Only certain classrooms on the fourth floor have an overwhelming number of measurements, resulting in poor accuracy.
+### preprocessing
+Intersect the ap information of raw_df and insert the data into the corresponding column.
+Optionally set to '-110' for locations where there is no 'ap' information.
+####DecisionTree
+![image](https://user-images.githubusercontent.com/74479972/173244491-40a5f265-c5f3-4df7-9680-64e7be20a54b.png)
+
 ### Algorithm
+Using PCA + RandomForest
+
 
 ## 4th week
 ### Progress
