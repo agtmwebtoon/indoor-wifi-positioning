@@ -70,6 +70,14 @@ df
 ![image](https://user-images.githubusercontent.com/104605749/168987604-b56232fc-b8cf-43f3-aea7-baa4487dab73.png)
 
 ## 3rd week
+
+### Progress
+
+* 해당 column에 데이터 삽입
+* Preprocessing with Dataset collection
+* 
+
+
 ### Check measurements
 * CAUTION: Do not measure too biased when measuring.
 
