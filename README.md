@@ -36,7 +36,7 @@ Develop Android application for indoor positioning (AI 공학관 4, 5층) using 
 
 Use the spinner to select the number of floors and  and press the START button to find the RSSI(Received Signal Strength Indication Value) value of nearby Wi-Fi and inform the WAP(Wireless Access Point) and distance.
 
-<img src="https://user-images.githubusercontent.com/104605749/168459534-4885bdc5-7205-4140-9ace-c9283cf9a16d.jpg" width = "200" height = "400"/>
+<img src="https://user-images.githubusercontent.com/104605749/173557409-3d7c79a0-73ac-4fc6-bbbd-23bcb9dfa884.jpg" width = "200" height = "400"/>
 
 ### Wi-Fi Signal Stength
 
