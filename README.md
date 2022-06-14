@@ -73,28 +73,35 @@ df
 
 ### Progress
 
-* 해당 column에 데이터 삽입
-* Preprocessing with Dataset collection
-* 
+* System Architecture
+* Model evaluation
 
+#### System Architecture
+* Location data collection
+![image](https://user-images.githubusercontent.com/74479972/173633557-7094d8d3-3b95-45ed-a293-f74488942997.png)
+If possible to measure the interior of the classroom, measure approximately 30 randomly.<br>
+If impossible to measure the interior of the classroom, measure approximately 30 times at random by dividing the area between the rooms accurately.
 
-### Check measurements
-* CAUTION: Do not measure too biased when measuring.
+#### Model evaluation
+* Decision Tree without preporcessing.
+* ![image](https://user-images.githubusercontent.com/74479972/173635178-41b83112-a71f-4168-8c68-1ee8dcff2a61.png)
+  Accuracy: 64%   => Data need to be preprocessed!
 
-* Problems along the way: Only certain classrooms on the fourth floor have an overwhelming number of measurements, resulting in poor accuracy.
+* <b>Data preprocessing - Augmentation</b> <br>: Techniques used to increase the amount of data by adding slightly modified copies of already existing data.
+* ![image](https://user-images.githubusercontent.com/74479972/173635784-28d8a3f0-ce1e-4dde-84c1-2af6533fe35b.png)
+   We covered each area with N(0, 3) for classroom, N(0, 2.3) for corridors according to the normal distribution and summed up with original dataset.
+   
+* <b>Data preprocessing - Data filtering</b> <br>: remove some unwanted components or features from a signal.
+<br> Some observation is sparse.(For example, individually operated hotspot..)
+<br> We regarded it as useless.
+<br> We drop observations consisted of 45 percent missing value.
+![image](https://user-images.githubusercontent.com/74479972/173636788-ce56ec70-6da1-41e0-ab55-cc5d06794f79.png)
 
-### preprocessing
-* Intersect the ap information of raw_df and insert the data into the corresponding column.
+* <b>Data preprocessing - Hyperarameter tuning</b> <br>RandomForest with GridSearch: remove some unwanted components or features from a signal.
+ ![image](https://user-images.githubusercontent.com/74479972/173637264-1e20131f-2afd-4e0d-9066-7e17fcd66b86.png)
 
-* Optionally set to '-110' for locations where there is no 'ap' information.
-
-#### DecisionTree
-
-![image](https://user-images.githubusercontent.com/74479972/173244491-40a5f265-c5f3-4df7-9680-64e7be20a54b.png)
-
-### Algorithm
-* Using PCA + RandomForest
-
+#### After data preprocessing
+![image](https://user-images.githubusercontent.com/74479972/173637834-78244ad6-deae-414b-82a9-0e32b4e123d5.png)
 
 ## 4th week
 ### Progress
